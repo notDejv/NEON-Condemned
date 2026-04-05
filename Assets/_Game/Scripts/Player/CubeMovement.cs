@@ -16,8 +16,8 @@ public class CubeMovement : MonoBehaviour
         Keyboard kb = Keyboard.current;
         if (kb != null)
         {
-            if (kb.wKey.isPressed) _moveInput.y += 1f;
-            if (kb.sKey.isPressed) _moveInput.y -= 1f;
+            if (kb.wKey.isPressed) _moveInput.y -= 1f;
+            if (kb.sKey.isPressed) _moveInput.y += 1f;
             if (kb.aKey.isPressed) _moveInput.x -= 1f;
             if (kb.dKey.isPressed) _moveInput.x += 1f;
         }
