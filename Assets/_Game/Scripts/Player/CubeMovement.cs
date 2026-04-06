@@ -31,6 +31,10 @@ public class CubeMovement : MonoBehaviour
         }
 
         Vector3 move = new Vector3(_moveInput.x, 0f, _moveInput.y);
+
+        if (move != Vector3.zero)
+            transform.rotation = Quaternion.LookRotation(move, Vector3.up);
+
         transform.Translate(move * speed * Time.deltaTime, Space.World);
     }
 }
